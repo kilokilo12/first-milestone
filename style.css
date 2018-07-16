@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,300,400,500,600,700,800');
 
 
+body {
+  background-color: #000000;
+  padding-top: 50px;
+}
+
+p {
+  margin: 10px 10px;
+}
+
+/*---------------------------------------navbar*/
 nav {
   overflow: auto;
 }
@@ -13,7 +23,7 @@ nav {
 #nav li {
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: large;
 }
@@ -29,11 +39,11 @@ nav {
   color: #e70614;
   padding-top: 30px;
   padding-right: 29px;
+
 }
 
-
 .navbar-inverse {
-  background-color: #000000;
+  background-color: #000;
 }
 
 .fa.fa-bars {
@@ -41,29 +51,39 @@ nav {
   font-size: 30px;
 }
 
-body {
-  background-color: #000000;
-}
+/*---------------------------------------Front page*/
 
-.container-fluid {
-  margin: 50px auto;
-  height: 500px;
-
-}
-
-.band-members {
-  color: #e70614;
-  padding-top: 100px;
-}
 .bg-image {
-  background-image: url(../assets/images/monkees.jpg);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 1.0)
+    ), url(../assets/images/monkees.jpg);
   width: 100vw;
   height: 100vh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
+
 }
 
+.front-text {
+  background-color: transparent;
+  color: #fff; 
+  display: inline;
+  padding: 50px;
+  position:absolute; 
+    transition: .5s ease;
+  
+}
+
+.first-heading {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  position: fixed;
+    bottom: 20px;
+    float: left;
+}
 
 .mp3 {
   position: fixed;
@@ -74,19 +94,87 @@ body {
 }
 
 
+/*-----------------------------------------Band members*/
 
-
-
-
-video {
-  max-width: 80%;
+.band-heading {
+  padding-bottom: 40px;
+  color: #e70614;
+  padding-top: 100px;
 }
 
+
+.band-members {
+  color: #e70614;
+  padding-top: 100px;
+}
+
+
+/*-------------------------------------------music page*/
+
+video {
+    width: 80%;
+    height: auto;
+    margin: 10%;
+    padding-top: 10px;
+    
+}
+
+.video-heading {
+  padding: 40px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.youtube-link {
+  text-decoration: none;
+}
+/*---------------------------------------------bookings*/
+
+.bg-wedding {
+  background: linear-gradient(
+      rgba(0, 0, 0, -0.5),
+      rgba(0, 0, 0, 1.0)
+    ), url(../assets/images/wedding.jpg);
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 37%;
+}
+
+.wedding-text {
+  color: white;
+}
+
+
+  .center-form {
+     margin: 0 auto;
+     padding-top: 40px;
+  
+  }  
+  
+  .booking-btn {
+    margin-top: 30%;
+    float: right;
+  }
+
+.form-area {
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+	}
+
+/*----------------------------------------media queries*/
 
 @media (max-width: 992px) {
   .bg-image {
     background-color: #f7f7f7;
-    background: url("../assets/images/background.jpg") center center fixed no-repeat;
+    background: linear-gradient(
+      rgba(0, 0, 0, -0.5),
+      rgba(0, 0, 0, 1.0)
+    ), url("../assets/images/davyjones.jpg") center center fixed no-repeat;
     width: 100vw;
     height: 100vh;
     background-size: 100% 100%;
@@ -94,5 +182,7 @@ video {
     
   }
 }
+
+
 
 
